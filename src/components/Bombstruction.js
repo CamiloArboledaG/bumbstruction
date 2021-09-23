@@ -8,6 +8,7 @@ import { IconButton } from '@mui/material';
 import Cuerpo from './Cuerpo/Cuerpo';
 import Sinopsis from './Cuerpo/Sinopsis';
 import Documento from './Cuerpo/Documento';
+import Uno from './Cuerpo/Avances/Uno';
 
 export default function Bombstruction() {
   return (
@@ -28,6 +29,9 @@ export default function Bombstruction() {
       </div>
       <div>
         <Documento></Documento>
+      </div>
+      <div>
+        <Uno></Uno>
       </div>
 
       
