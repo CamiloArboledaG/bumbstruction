@@ -3,6 +3,7 @@ import * as React from 'react';
 import { makeStyles } from '@mui/styles';
 import Grid from '@mui/material/Grid';
 import { Typography } from '@mui/material';
+import Integrantes from './Integrantes';
 
 const useStyles = makeStyles({
     root: {
@@ -40,7 +41,9 @@ export default function Sinopsis() {
                     <Typography variant="subtitle1" align="left">Un personaje víctima de un grupo mafioso decide saciar su sed de venganza, enfrentándose a ellos en diferentes partidas de bombardeos. Para ello tendrá que sobrevivir a sus contrincantes, acabar con sus enemigos y obtener recompensas en los enfrentamientos uno a uno con otros personajes online de la mafia.
                     </Typography>
                 </div>
-
+                <div>
+                    <Integrantes></Integrantes>
+                </div>
             </Grid>
         </Grid>
     );

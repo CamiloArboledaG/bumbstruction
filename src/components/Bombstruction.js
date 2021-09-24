@@ -9,6 +9,7 @@ import Cuerpo from './Cuerpo/Cuerpo';
 import Sinopsis from './Cuerpo/Sinopsis';
 import Documento from './Cuerpo/Documento';
 import Uno from './Cuerpo/Avances/Uno';
+import Integrantes from './Cuerpo/Integrantes';
 
 export default function Bombstruction() {
   return (
