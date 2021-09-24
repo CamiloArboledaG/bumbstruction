@@ -1,10 +1,9 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Switch from '@mui/material/Switch';
-import Paper from '@mui/material/Paper';
 import Grow from '@mui/material/Grow';
 import FormControlLabel from '@mui/material/FormControlLabel';
-import { Avatar, Typography } from '@mui/material';
+import { Avatar} from '@mui/material';
 
 const icon = (
   <div style={{display:"flex", flexDirection:"column", alignItems:"center", padding:"1rem"}}>
@@ -33,7 +32,7 @@ export default function SimpleGrow() {
   };
 
   return (
-    <Box>
+    <div>
         
       <FormControlLabel
         control={<Switch checked={checked} onChange={handleChange} />}
@@ -60,6 +59,6 @@ export default function SimpleGrow() {
           {icon3}
         </Grow>
       </Box>
-    </Box>
+    </div>
   );
 }
