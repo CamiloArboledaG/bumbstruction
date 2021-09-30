@@ -9,22 +9,34 @@ import Cuerpo from './Cuerpo/Cuerpo';
 import Sinopsis from './Cuerpo/Sinopsis';
 import Documento from './Cuerpo/Documento';
 import Uno from './Cuerpo/Avances/Uno';
+import Trailer from './Cuerpo/Trailer';
+import {
+  BrowserRouter as Router,
+} from "react-router-dom";
 
 export default function Bombstruction() {
   return (
+    <Router>
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="sticky" color="inherit">
+      <AppBar position="sticky" color="transparent" style={{ boxShadow: "none", }}>
         <Toolbar variant="dense">
-        <IconButton > 
-        <img src={Logo} alt="Logo" className="Logo"/>
-        </IconButton>
+          <div style={{ backgroundColor: "lightblue", paddingLeft:"1rem", paddingRight:"1rem", boxShadow: "2px 2px gray", borderRadius:"0% 0% 50% 70%"}}>
+            <IconButton >
+               <a href="#Video">
+              <img src={Logo} alt="Logo" className="Logo" />
+               </a>
+            </IconButton>
+          </div>
         </Toolbar>
       </AppBar>
-
+      
       <div>
         <Cuerpo></Cuerpo>
       </div>
-      <div>
+      <div id= "Video">
+        <Trailer></Trailer>
+      </div>
+      <div >
         <Sinopsis></Sinopsis>
       </div>
       <div>
@@ -34,7 +46,8 @@ export default function Bombstruction() {
         <Uno></Uno>
       </div>
 
-      
+
     </Box>
+    </Router>
   );
 }
