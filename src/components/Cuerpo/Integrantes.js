@@ -38,7 +38,7 @@ export default function SimpleGrow() {
         control={<Switch checked={checked} onChange={handleChange} />}
         label="Mostrar creadores"
       />
-      <Box sx={{ display: 'flex' }} style={{ alignItems:"center", justifyContent:"center"}}>
+      <Box sx={{ display: 'flex'}} style={{ alignItems:"center", justifyContent:"center"}}>
         <Grow in={checked}
         style={{ transformOrigin: '0 0 0' }}
         {...(checked ? { timeout: 1000 } : {})}

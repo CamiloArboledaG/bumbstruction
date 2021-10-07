@@ -8,8 +8,7 @@ const useStyles = makeStyles({
     root: {
         display: "flex",
         alignItems: "center",
-        height: "100vh",
-        padding: "2rem"
+        padding: "5rem"
     }, 
     video: {
         width:"100%", 
@@ -23,17 +22,17 @@ const useStyles = makeStyles({
     },
 });
 
-export default function Sinopsis() {
+export default function Sinopsis(props) {
     const classes = useStyles();
     return (
         <Grid container spacing={2} className={classes.root}>
             <Grid item xs={6}>
-            <Typography variant="h3" align="left" className={classes.tittle}>Avance 1</Typography>
-            <Typography variant="subtitle1" align="left" className={classes.tittle}>El avance 1 se centra en la mecanica de lanzar bombas y que exploten pasado los segundos.</Typography>
+            <Typography variant="h3" align="left" className={classes.tittle}>{props.Tipo}</Typography>
+            <Typography variant="subtitle1" align="left" className={classes.tittle}>{props.Descripcion}</Typography>
             </Grid>
             <Grid item xs={6} className={classes.video}>
                 <ReactPlayer
-                url='https://youtu.be/qlq1GbdjQ3k'
+                url={props.Link}
                 width='100%'
                 height='100%'
                 playing
