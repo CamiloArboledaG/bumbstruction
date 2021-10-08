@@ -6,16 +6,15 @@ import Box from '@mui/material/Box';
 
 const useStyles = makeStyles({
     Logo: {
-        height: "80vh",
-        minHeight: "20vh",
-        
+        height: "100%",
+        width:"100%",
     },
 });
 
 export default function Nombre() {
     const classes = useStyles();
     return (
-        <Box sx={{ flexGrow: 1, height: "100vh" }}>
+        <Box sx={{ flexGrow: 1, height: "100vh", }}>
         <Grid container spacing={2} >
             <Grid item xs={12}>
                  <img src={bombs} alt="Logo" className={classes.Logo} />

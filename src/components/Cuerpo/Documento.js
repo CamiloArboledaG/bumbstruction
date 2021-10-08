@@ -11,7 +11,8 @@ const useStyles = makeStyles({
         height: "100vh",
     },
     Logo: {
-        height: "50vh",
+        height: "100%",
+        width:"100%",
         minHeight: "20vh",
     },
     sinopsis: {
@@ -52,7 +53,7 @@ export default function Sinopsis() {
                     <a href='/GDD.pdf' className={classes.down} download>Descargar</a>
                 </Button>
             </Grid>
-            <Grid item xs={12} md={5}>
+            <Grid item xs={12} md={5} >
                 <img src={Imagen} alt="Logo" className={classes.Logo} />
             </Grid>
 
