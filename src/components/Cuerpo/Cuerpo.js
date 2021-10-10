@@ -1,23 +1,27 @@
 import bombs from '../img/Nombre.png';
 import * as React from 'react';
-import { makeStyles } from '@mui/styles';
 import Grid from '@mui/material/Grid';
-import Box from '@mui/material/Box';
+import styled from "styled-components";
+import { mobile } from '../../responsive';
 
-const useStyles = makeStyles({
-    Logo: {
-        height: "100%",
-        width:"100%",
-    },
-});
+
+const Image = styled.img`
+    width: 80%;
+    height: 100vh;
+    ${mobile ({width:"100%", height:"100%"})}
+`
+const Box = styled.div`
+    height: 100vh;  
+    ${mobile ({height:"80vh", display:"flex", alignItems: "center" })}
+`
+
 
 export default function Nombre() {
-    const classes = useStyles();
     return (
-        <Box sx={{ flexGrow: 1, height: "100vh", }}>
-        <Grid container spacing={2} >
+        <Box>
+        <Grid container>
             <Grid item xs={12}>
-                 <img src={bombs} alt="Logo" className={classes.Logo} />
+                <Image src={bombs}/>
             </Grid>
         </Grid>
         </Box>

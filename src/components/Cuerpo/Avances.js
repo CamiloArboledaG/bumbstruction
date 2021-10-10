@@ -1,34 +1,38 @@
 import * as React from "react";
-import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Modal from "@mui/material/Modal";
 import { makeStyles } from "@mui/styles";
 import Uno from "./Avances/Uno";
 import { Avatar, Typography } from "@mui/material";
+import styled from "styled-components";
+import { mobile } from "../../responsive";
 
-const style = {
-  position: "absolute",
-  width:"54vw",
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%, -50%)",
-  bgcolor: "background.paper",
-  p: 4,
-  borderRadius: "5%",
-  boxShadow:
-    "inset 20px 20px 50px 5px white, inset 0px 0px 4px 0px black, 1px 1px 1px 0px gray",
-};
+
+const Container = styled.div`
+  position: absolute;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  align-items: center;
+  justify-content: center;
+  margin: 0px;
+  top: 50%;
+  left: 50%;
+  ${mobile({ flexWrap: "Wrap", margin: "15pxs" })}
+`;
 
 const useStyles = makeStyles({
   root: {
     display: "flex",
-    margin:"2rem",
+    margin: "2rem",
     alignItems: "center",
     justifyContent: "center",
     height: "15rem",
-    borderRadius: "10%",
-    boxShadow:
-      "inset 20px 20px 50px 5px white, inset 0px 0px 4px 0px black, 1px 1px 1px 0px gray",
+    borderRadius: "2%",
+    boxShadow: "10px 10px 2px 1px lightcoral",
+    border: "2px solid lightcoral",
+    "&:hover": {
+      boxShadow: "inset 5px 5px 2px 1px lightcoral",
+    },
   },
 });
 
@@ -46,7 +50,9 @@ export default function BasicModal(props) {
             src={props.Avatarimg}
             sx={{ width: 150, height: 150 }}
           />
-          <Typography variant="h6" style={{color:"black"}}>{props.Tipo}</Typography>
+          <Typography variant="h6" style={{ color: "black" }}>
+            {props.Tipo}
+          </Typography>
         </div>
       </Button>
       <Modal
@@ -55,9 +61,13 @@ export default function BasicModal(props) {
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <Box sx={style} >
-          <Uno Tipo={props.Tipo} Link={props.link} Descripcion={props.Descripcion}></Uno>
-        </Box>
+        <Container>
+          <Uno
+            Tipo={props.Tipo}
+            Link={props.link}
+            Descripcion={props.Descripcion}
+          ></Uno>
+        </Container>
       </Modal>
     </div>
   );
