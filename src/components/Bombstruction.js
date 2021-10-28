@@ -14,30 +14,31 @@ import Trailer from "./Cuerpo/Trailer";
 import Avances from "./Cuerpo/Avances";
 import { BrowserRouter as Router } from "react-router-dom";
 import styled from "styled-components";
-import {mobile} from "../responsive";
+import Demo from "./Cuerpo/Avances/Demo";
+import { mobile } from "../responsive";
 
 const Container = styled.div`
-    height: 100vh;
-    display: flex;
-    ${mobile ({ flexWrap: "Wrap", margin:"15px"})}
-`
+  height: 70vh;
+  display: flex;
+  ${mobile({ flexWrap: "Wrap", margin: "15px", height: "100vh" })}
+`;
 const ContainerAvances = styled.div`
-    flex:1;
-    ${mobile ({ margin:"15pxs"})}
-`
+  flex: 1;
+  ${mobile({ margin: "15pxs" })}
+`;
 
 const Texto = styled.h1`
-    font-size: 60px;
-    font-weight: 400;
-    ${mobile ({margin:"15pxs"})}
-`
+  font-size: 60px;
+  font-weight: 400;
+  ${mobile({ margin: "15pxs" })}
+`;
 const Wrapper = styled.div`
-    ${mobile ({margin:"15pxs", flexWrap:"Wrap"})}
-`
+  ${mobile({ margin: "15pxs", flexWrap: "Wrap" })}
+`;
 const GridContainer = styled.div`
-    width: 100%;
-    ${mobile ({margin:"15pxs", flexWrap:"Wrap", marginTop:"200px"})}
-`
+  width: 100%;
+  ${mobile({ margin: "15pxs", flexWrap: "Wrap", marginTop: "200px" })}
+`;
 
 export default function Bombstruction() {
   return (
@@ -68,53 +69,56 @@ export default function Bombstruction() {
           </Toolbar>
         </AppBar>
         <Wrapper>
-        <Grid container >
-          <Grid item xs={12}>
-            <div>
-              <Cuerpo></Cuerpo>
-            </div>
+          <Grid container>
+            <Grid item xs={12}>
+              <div>
+                <Cuerpo></Cuerpo>
+              </div>
+            </Grid>
+            <Grid item xs={12}>
+              <div id="Video">
+                <Trailer></Trailer>
+              </div>
+            </Grid>
+            <Grid item xs={12}>
+              <div>
+                <Sinopsis></Sinopsis>
+              </div>
+            </Grid>
+            <Grid item xs={12}>
+              <div>
+                <Documento></Documento>
+              </div>
+            </Grid>
+            <GridContainer>
+              <Grid item xs={12}>
+                <Texto>Avances</Texto>
+                <Container>
+                  <ContainerAvances item xs={8} sm={6} md={4}>
+                    <Avances
+                      Tipo="Avance 1"
+                      Avatarimg={Avance1}
+                      Descripcion="El avance 1 se centra en la mecanica de lanzar bombas y que exploten pasado los segundos."
+                      link="https://youtu.be/qlq1GbdjQ3k"
+                    ></Avances>
+                  </ContainerAvances>
+                  <ContainerAvances item xs={8} sm={6} md={4}>
+                    <Avances
+                      Tipo="Avance 2"
+                      Avatarimg={Avance2}
+                      Descripcion="El avance 2 se centra en la implementación del del personaje y animaciones al correr y saltar, adicional de incluir la barra de vida y de bombas disponibles por el jugador."
+                      link="https://youtu.be/LexF8Ne8KGE"
+                    ></Avances>
+                  </ContainerAvances>
+                </Container>
+              </Grid>
+            </GridContainer>
+            <Grid item xs={12}>
+              <div>
+              <Demo link="https://youtu.be/HYBKI0AT32Q"/>
+              </div>
+            </Grid>
           </Grid>
-          <Grid item xs={12}>
-            <div id="Video">
-              <Trailer></Trailer>
-            </div>
-          </Grid>
-          <Grid item xs={12}>
-            <div>
-              <Sinopsis></Sinopsis>
-            </div>
-          </Grid>
-          <Grid item xs={12}>
-            <div>
-              <Documento></Documento>
-            </div>
-          </Grid>
-          <GridContainer>
-          <Grid item xs={12}>
-            <Texto>
-              Avances
-            </Texto>
-            <Container >
-              <ContainerAvances item xs={8} sm={6} md={4}>
-                <Avances
-                  Tipo="Avance 1"
-                  Avatarimg={Avance1}
-                  Descripcion="El avance 1 se centra en la mecanica de lanzar bombas y que exploten pasado los segundos."
-                  link="https://youtu.be/qlq1GbdjQ3k"
-                ></Avances>
-              </ContainerAvances>
-              <ContainerAvances item xs={8} sm={6} md={4}>
-                <Avances
-                Tipo="Avance 2"
-                Avatarimg={Avance2}
-                Descripcion="El avance 2 se centra en la implementación del del personaje y animaciones al correr y saltar, adicional de incluir la barra de vida y de bombas disponibles por el jugador."
-                link="https://youtu.be/LexF8Ne8KGE"
-                ></Avances>
-              </ContainerAvances>
-            </Container>
-          </Grid>
-          </GridContainer>
-        </Grid>
         </Wrapper>
       </Box>
     </Router>
