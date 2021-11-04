@@ -27,11 +27,12 @@ const useStyles = makeStyles({
     alignItems: "center",
     justifyContent: "center",
     height: "15rem",
-    borderRadius: "2%",
-    boxShadow: "10px 10px 2px 1px lightcoral",
-    border: "2px solid lightcoral",
+    borderRadius: "25px",
+    boxShadow: "3px 3px 2px 1px gray",
+    backgroundColor:"rgba(156, 226, 226, 0.5)",
     "&:hover": {
-      boxShadow: "inset 5px 5px 2px 1px lightcoral",
+      boxShadow: "inset 2px 2px 2px 1px gray",
+      backgroundColor:"rgba(156, 226, 226, 0.3)",
     },
   },
 });
