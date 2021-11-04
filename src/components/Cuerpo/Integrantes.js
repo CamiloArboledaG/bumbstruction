@@ -13,7 +13,7 @@ const icon = (
 );
 const icon2 = (
     <div style={{display:"flex", flexDirection:"column", alignItems:"center", padding:"1rem"}}>
-    <Avatar alt="Remy Sharp" src="./danny.jpg"  sx={{ width: 150, height: 150 }}/>
+    <Avatar alt="Remy Sharp" src=""  sx={{ width: 150, height: 150 }}/>
     Danny Alejandro Martínez
   </div>
   );

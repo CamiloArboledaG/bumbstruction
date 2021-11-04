@@ -4,11 +4,11 @@ import { mobile } from "../../../responsive";
 
 const Container = styled.div`
   height: 80vh;
-  width: 100%;
+  margin: 15rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  ${mobile({height: "100vh" })}
+  ${mobile({height: "120vh", margin:"15px" })}
 `;
 
 const Wrapper = styled.div`

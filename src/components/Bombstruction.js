@@ -15,10 +15,12 @@ import Avances from "./Cuerpo/Avances";
 import { BrowserRouter as Router } from "react-router-dom";
 import styled from "styled-components";
 import Demo from "./Cuerpo/Avances/Demo";
+import Galeria from "./Cuerpo/Galeria";
 import { mobile } from "../responsive";
 
 const Container = styled.div`
   height: 70vh;
+  margin: 0rem 15rem;
   display: flex;
   ${mobile({ flexWrap: "Wrap", margin: "15px", height: "100vh" })}
 `;
@@ -116,6 +118,11 @@ export default function Bombstruction() {
             <Grid item xs={12}>
               <div>
               <Demo link="https://youtu.be/HYBKI0AT32Q"/>
+              </div>
+            </Grid>
+            <Grid item xs={12}>
+              <div>
+              <Galeria/>
               </div>
             </Grid>
           </Grid>

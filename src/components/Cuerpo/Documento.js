@@ -22,8 +22,8 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 100vh;
-  ${mobile ({ height: "80vh", flexWrap: "Wrap", margin:"10px"})}
+  margin: 15rem;
+  ${mobile ({ flexDirection:"column", margin:"5px"})}
 `;
 const TextContainer = styled.div`
     margin: 30px;
@@ -40,14 +40,18 @@ const TituloContainer = styled.h3`
     ${mobile ({ paddingBottom: "2px", fontSize: "35px"})}
 `;
 const ImageContainer = styled.div`
-    margin: 30px;
-    ${mobile ({ margin: "10px"})}
+  max-height: 100%;
+  background-color: rgba(226,156,156,0.5);
+  margin: 2rem;
+  padding: 2rem;
+    border-radius: 25px;
+  display: flex;
+  ${mobile({ width: "80vw", height: "100%"})}
 `;
-
 const Image = styled.img`
-    height: 100%;
-    width: 100%;
-    flex:1;
+    width: 500px;
+  height: 100%;
+  ${mobile({ width: "100%" })}
 `;
 
 export default function Sinopsis() {

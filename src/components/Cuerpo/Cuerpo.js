@@ -12,7 +12,7 @@ const Image = styled.img`
 `
 const Box = styled.div`
     height: 100vh;  
-    ${mobile ({height:"80vh", display:"flex", alignItems: "center" })}
+    ${mobile ({height:"100vh", display:"flex", alignItems: "center" })}
 `
 
 

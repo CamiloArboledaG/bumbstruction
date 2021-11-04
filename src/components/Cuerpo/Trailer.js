@@ -1,29 +1,28 @@
 import * as React from 'react';
-import { makeStyles } from '@mui/styles';
 import ReactPlayer from 'react-player';
-import { Box } from '@mui/system';
+import styled from "styled-components";
+import { mobile } from "../../responsive";
 
-const useStyles = makeStyles({
-    root: {
-        display: "flex",
-        alignItems: "center",
-        justifyContent:"center",
-        height: "100vh",
-    },
-});
+const Container = styled.div`
+  height: 100vh;
+  margin: 15rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  ${mobile({margin: "0", height:"50vh" })}
+`;
 
 export default function Sinopsis() {
-    const classes = useStyles();
     return (
-        <Box container spacing={2} className={classes.root}>
+        <Container>
                 <ReactPlayer
                 url='https://www.youtube.com/watch?v=QvsJeaEfEBw'
-                width='80%'
-                height='90%'
+                width='100%'
+                height='80%'
                 playing
                 controls
                 playbackRate= {1}
                 />
-        </Box>
+        </Container>
     );
 }
